@@ -11,21 +11,22 @@
 سعید زینل‌پور
 """
 
+def skyline(*args):
+    if args:
+        longest = max(args)
+        return longest
+    return 0
 
-a = int(input(""))
+def split_to_int(inp):
+    rs = inp.split(" ") if inp else []
+    next_rs = []
+    for x in range(len(rs)):
+        if rs[x]:
+            next_rs.append(int(rs[x])) 
+    return next_rs
 
-if a > 50000:
-    a *= 0.8
-elif a >= 20000:
-    a *= 0.9
-print(int(a))
+input_string = input("")
+input_int_arr = split_to_int(input_string)
+output = skyline(*input_int_arr)
 
-def func_aval():
-    '''
-    
-
-    Returns
-    -------
-    None.
-
-    '''
+print(output)

@@ -11,21 +11,21 @@
 سعید زینل‌پور
 """
 
+def sum_numbers(*args):
+    final_sum = 0
+    for x in args:
+        final_sum += x
+    return final_sum
 
-a = int(input(""))
 
-if a > 50000:
-    a *= 0.8
-elif a >= 20000:
-    a *= 0.9
-print(int(a))
+def split_to_int(inp):
+    rs = inp.split(" ") if inp else []
+    for x in range(len(rs)):
+        rs[x] = int(rs[x]) if rs[x] else 0
+    return rs
 
-def func_aval():
-    '''
-    
+input_string = input("")
+input_int_arr = split_to_int(input_string)
+output = sum_numbers(*input_int_arr)
 
-    Returns
-    -------
-    None.
-
-    '''
+print(output)

@@ -11,21 +11,24 @@
 سعید زینل‌پور
 """
 
+def pick_evens(*args):
+    next_arr = []
+    for x in args:
+        if x % 2 == 0:
+            next_arr.append(x)
+    return next_arr
 
-a = int(input(""))
 
-if a > 50000:
-    a *= 0.8
-elif a >= 20000:
-    a *= 0.9
-print(int(a))
+def split_to_int(inp):
+    rs = inp.split(" ") if inp else []
+    next_rs = []
+    for x in range(len(rs)):
+        if rs[x]:
+            next_rs.append(int(rs[x])) 
+    return next_rs
 
-def func_aval():
-    '''
-    
+input_string = input("")
+input_int_arr = split_to_int(input_string)
+output = pick_evens(*input_int_arr)
 
-    Returns
-    -------
-    None.
-
-    '''
+print(output)

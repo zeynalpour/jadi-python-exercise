@@ -11,21 +11,10 @@
 سعید زینل‌پور
 """
 
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
 
-a = int(input(""))
-
-if a > 50000:
-    a *= 0.8
-elif a >= 20000:
-    a *= 0.9
-print(int(a))
-
-def func_aval():
-    '''
-    
-
-    Returns
-    -------
-    None.
-
-    '''
+print(is_even(int(input(""))))

@@ -12,20 +12,7 @@
 """
 
 
-a = int(input(""))
+def hello_world(name):
+    print(f"Hello, {name}!")
 
-if a > 50000:
-    a *= 0.8
-elif a >= 20000:
-    a *= 0.9
-print(int(a))
-
-def func_aval():
-    '''
-    
-
-    Returns
-    -------
-    None.
-
-    '''
+hello_world(input(""))
